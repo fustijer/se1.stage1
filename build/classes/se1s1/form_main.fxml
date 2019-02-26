@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: fcfcfc;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se1s1.form_main">
+   <left>
+      <AnchorPane prefHeight="800.0" prefWidth="60.0" style="-fx-background-color: f2f2f2;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="10.0" layoutY="30.0" prefHeight="200.0" prefWidth="25.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Resources/ic_account_circle_black_48dp.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Region minHeight="-Infinity" prefHeight="57.0" prefWidth="40.0" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Resources/ic_dashboard_black_48dp.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#show_form_task" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Resources/ic_add_circle_outline_black_48dp.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#show_form_deadline" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Resources/ic_assignment_black_48dp.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Region minHeight="-Infinity" prefHeight="462.0" prefWidth="40.0" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Resources/ic_settings_black_48dp.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <VBox fx:id="main_container" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="115.0" prefWidth="1140.0">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="25.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@Resources/ic_alarm_black_48dp.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="52.0" layoutY="12.0" text="Deadlines" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="36.0" text="00/00/0000 - 00%" visible="false">
+                           <font>
+                              <Font name="Century Gothic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="53.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Resources/UEA_NEW_BRAND_Magenta.png" />
+                     </image>
+                  </ImageView>
+                  <Region prefHeight="58.0" prefWidth="111.0" HBox.hgrow="ALWAYS" />
+                  <AnchorPane prefHeight="24.0" prefWidth="323.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@Resources/ic_date_range_black_48dp.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="63.0" layoutY="3.0" prefHeight="46.0" prefWidth="191.0" text="Wednesday" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="251.0" layoutY="2.0" text="Febuary">
+                           <font>
+                              <Font name="Century Gothic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="250.0" layoutY="22.0" text="17th">
+                           <font>
+                              <Font name="Century Gothic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="80.0" right="80.0" top="30.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="263.0" prefWidth="1140.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <BorderPane prefHeight="278.0" prefWidth="413.0" HBox.hgrow="ALWAYS">
+                     <top>
+                        <Label text="Complete (0)" BorderPane.alignment="TOP_LEFT">
+                           <font>
+                              <Font name="Century Gothic" size="18.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <center>
+                        <TableView fx:id="tableView_complete" prefHeight="240.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Subject" />
+                              <TableColumn prefWidth="75.0" text="Type" />
+                              <TableColumn prefWidth="75.0" text="Due" />
+                           </columns>
+                        </TableView>
+                     </center>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </BorderPane>
+                  <BorderPane prefHeight="278.0" prefWidth="413.0" HBox.hgrow="ALWAYS">
+                     <top>
+                        <Label text="Upcoming (0)" BorderPane.alignment="TOP_LEFT">
+                           <font>
+                              <Font name="Century Gothic" size="18.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <center>
+                        <TableView prefHeight="240.0" prefWidth="359.0" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Subject" />
+                              <TableColumn prefWidth="75.0" text="Type" />
+                              <TableColumn prefWidth="75.0" text="Due" />
+                           </columns>
+                        </TableView>
+                     </center>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </BorderPane>
+                  <BorderPane prefHeight="278.0" prefWidth="413.0" HBox.hgrow="ALWAYS">
+                     <top>
+                        <Label text="Missed (0)" BorderPane.alignment="TOP_LEFT">
+                           <font>
+                              <Font name="Century Gothic" size="18.0" />
+                           </font>
+                        </Label>
+                     </top>
+                     <center>
+                        <TableView prefHeight="255.0" prefWidth="201.0" BorderPane.alignment="CENTER">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Subject" />
+                              <TableColumn prefWidth="75.0" text="Type" />
+                              <TableColumn prefWidth="75.0" text="Due" />
+                           </columns>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </children>
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </HBox>
+            <BorderPane prefHeight="348.0" prefWidth="1140.0" VBox.vgrow="ALWAYS">
+               <center>
+                      <WebView fx:id="webView" prefHeight="260.0" prefWidth="407.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
